@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!-- Librería Typed.js -->
+</head>
+<body>
+
+
+    <!-- Parallax Section con animación de texto -->
+    <div class="parallax" id="type-text">
+        <span id="typed-output"></span> <!-- Contenedor para la animación -->
+        <div class="scroll-down">
+            <p>Scroll down to see more</p>
+            <a href="#hero" class="arrow">&#8595;</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <img src="./img/imagen2yo.jpg" alt="Foto de Sofía" class="hero-img">
+        <h1 class="animated-title">Hello, I'm <span class="highlight">Sofia</span></h1>
+        <p class="subheading">Full Stack Developer</p>
+
+        <!-- Botones animados -->
+        <div class="button-container">
+            <a href="#aboutMe" class="animated-button">About me</a>
+            <a href="#projects" class="animated-button">Projects</a>
+            <a href="#skills" class="animated-button">Skills</a> <!-- Nuevo botón -->
+            <a href="#contact" class="animated-button">Contact</a>
+
+        </div>
+    </header>
+
+<!-- Sección About Me -->
+<section class="about-me" id="aboutMe">
+    <div class="about-content">
+        <div class="about-text">
+            <h2>About Me</h2>
+            <p>Hello everyone! I've always been fascinated by the technology that surrounds us and how it transforms our lives. This interest led me to become a full-stack developer. I've gained experience in various web and mobile projects, as well as knowledge of development processes, design, and database technologies. I have solid technical skills in programming languages ​​such as JavaScript, HTML, CSS, TypeScript, ReactJS, Quasar Framework v2, and NodeJS. Currently, I´m dedicating my free time to complete several courses to improve my self and boost my knowledge.</p>
+        </div>
+        
+        <!-- Imagen de perfil -->
+        <div class="about-image">
+            <img src="img/imagen2yo.jpg" alt="Foto de perfil">
+        </div>
+    </div>
+</section>
+
+<!-- Sección de Skills -->
+<section class="skills" id="skills">
+    <div class="skills-content">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>MySQL</li>
+    </ul>
+</div>
+</section>
+
+    
+
+
+    
+  
+  <!-- Sección de Proyectos -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <a href="https://sophie568.github.io/PaginaWebOffial.github.io/">
+                <img src="img/paginaweb.jpg" alt="Project 01 Image" class="project-image"> <!-- Imagen del proyecto 1 -->
+                <h3>Project 01</h3>
+                <p>Short description of the project.</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://sophie568.github.io/videoJuego.github.io/">
+                <img src="img/paginaweb2.jpg" alt="Project 02 Image" class="project-image"> <!-- Imagen del proyecto 2 -->
+                <h3>Project 02</h3>
+                <p>Short description of the project.</p>
+            </a>
+        </div>
+        <div class="project">
+            <a href="https://sophie568.github.io/">
+                <img src="img/paginaweb3.jpg" alt="Project 03 Image" class="project-image"> <!-- Imagen del proyecto 3 -->
+                <h3>Project 03</h3>
+                <p>Short description of the project.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    
+<!-- Sección de Contacto -->
+<section id="contact">
+    <h2>Contact</h2>
+   
+    <ul>
+        <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/sofia" class="contact-link">LinkedIn</a></li>
+        <li><i class="fa-brands fa-github"></i><a href="https://github.com/sofia" class="contact-link">GitHub</a></li>
+        <li><i class="fa-solid fa-phone"></i>2494623036</li> <!-- Agregar tu número de celular -->
+        <li><i class="fa-regular fa-envelope"></i>valenzuelasofia630@gmail.com</li> <!-- Agregar tu email -->
+        <li><i class="fa-solid fa-location-dot"></i> Argentina</li> <!-- País de origen -->
+    </ul>
+</section>
+    
+    <footer>
+        <p>&copy; 2025 Sofía. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

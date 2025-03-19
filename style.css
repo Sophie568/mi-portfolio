@@ -1,0 +1,619 @@
+/* --- Estilos Generales --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #3c3c3c; /* Fondo oscuro */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+}
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que ocupe toda la pantalla */
+    text-align: center;
+    position: relative;
+}
+
+#typed-output {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff66c4; /* Asegura que el color se mantenga */
+}
+
+/* --- Estilos del Hero Section --- */
+/* --- Estilos del Hero Section --- */
+.hero-img {
+    width: 180px; /* Ajusta el tamaño según prefieras */
+    height: 180px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 4px; /* Borde rosado */
+    display: block;
+    margin: 0 auto 20px; /* Centra la imagen y deja espacio abajo */
+    transition: transform 0.3s ease;
+    color: #FFFFFF;
+}
+
+.hero-img:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.hero {
+    background: #3c3c3c;
+    padding: 100px 0; 
+    border-radius: 15px;
+    margin-bottom: 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+}
+
+.animated-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #ff66c4;
+    background-size: 300% 300%;
+    background-clip: text;
+    color: transparent;
+    animation: colorChange 3s infinite alternate, fadeIn 1.5s ease-in-out;
+    
+}
+
+/* Animación de cambio de color */
+@keyframes colorChange {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(-20px);
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Animación de aparición para el encabezado de la sección Hero (Hola, soy Sofía) */
+/* --- Animación para los botones debajo de "Hola, soy Sofía" --- */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap; /* Para que los botones no se salgan en pantallas pequeñas */
+    width: 100%;
+    max-width: 500px; /* Ajusta el ancho para evitar que se estiren demasiado */
+}
+
+
+.animated-button {
+    background-color: #db6da1; /* Botón rosa */
+    color: #FFFFFF; /* Texto blanco */
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px); /* Comienza desde abajo */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.animated-button:nth-child(1) {
+    animation-delay: 0.5s; /* Retraso para "Sobre mí" */
+}
+
+.animated-button:nth-child(2) {
+    animation-delay: 0.7s; /* Retraso para "Proyectos" */
+}
+
+.animated-button:nth-child(3) {
+    animation-delay: 0.9s; /* Retraso para "Contacto" */
+}
+
+/* Animación de aparición de los botones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Comienza desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Estilo para los botones al pasar el ratón (hover) */
+.animated-button:hover {
+    background-color: #cc9dba; /* Botón rosa más oscuro al hacer hover */
+    transform: translateY(-5px); /* Subir un poco al hacer hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Agregar sombra al hacer hover */
+}
+
+
+
+/* --- Espaciado entre secciones --- */
+.section {
+    margin: 80px 0; /* Aumenté el margen entre secciones */
+    padding: 100px 0;
+}
+
+
+/* --- Sección Sobre Mí --- */
+.about-me{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    color: #ff66c4;
+    opacity: 0; /* Para efecto de aparición */
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.about-content {
+    display: flex; /* Usamos flexbox para colocar texto e imagen uno al lado del otro */
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 30px; /* Espacio entre el texto y la imagen */
+}
+
+.about-me.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: #ff66c4;
+    text-align: left; /* Color verde similar al de la imagen */
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #bbb; /* Color de texto más suave */
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ff66c4;
+   
+}
+.skills-content {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ff66c4;
+}
+.skills-content h2 {
+    
+    font-size: 3rem; /* Tamaño del título */
+    color: #ff66c4;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px; /* Espacio entre columnas */
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    color: #ff66c4;
+    font-size: 1.2rem;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex: 1 1 40%; /* Para dividir en dos columnas */
+    text-align: center;
+    font-weight: bold;
+   
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+
+.skills-list li:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+
+.skills-list li::before {
+    content: ">";
+    color: #ff66c4;
+    margin-right: 10px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    border: 4px solid #fff;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+    
+ 
+}
+
+/* Animación para las habilidades */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Comienza desde abajo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Termina en su posición original */
+    }
+}
+
+/* Retrasos para las animaciones de cada habilidad */
+.skill:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.skill:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.skill:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.skill:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.skill:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.skill:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.skill:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+/* Efecto hover en las habilidades */
+.skill:hover {
+    background-color: #e6007e;
+    transform: translateY(-5px); /* Mover hacia arriba al hacer hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra suave al pasar el ratón */
+}
+
+/* Responsividad: Cambiar el número de columnas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Se adapta a pantallas pequeñas */
+    }
+}
+
+/* --- Sección Proyectos --- */
+#projects h2 {
+    font-size: 3rem; /* Tamaño del título */
+    color: #ff66c4;
+    margin-bottom: 20px;
+}
+.projects-container {
+    display: flex;
+    margin-top: 80px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    color: #ff66c4;
+    
+}
+
+.project-image {
+    width: 100%;  /* Hace que la imagen ocupe todo el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;  /* Redondea las esquinas de la imagen */
+    transition: transform 0.3s ease;  /* Efecto de transición */
+}
+
+.project-image:hover {
+    transform: scale(1.05);  /* Hace un zoom ligero al pasar el cursor sobre la imagen */
+}
+
+.highlight {
+    color:#ff66c4; /* Color de los botones */
+    font-weight: bold;
+    font-size: 3rem; /* Ajusta el tamaño según lo necesites */
+}
+
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project h3 {
+    color: #ff66c4;
+}
+.project p {
+    color: #FF6347; /* Elige el color que prefieras */
+}
+
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+ /* --- Animaciones generales --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #ff66c4;
+    }
+    50% {
+        box-shadow: 0 0 20px #ff66c4;
+    }
+    100% {
+        box-shadow: 0 0 10px #ff66c4;
+    }
+}
+
+/* --- Efecto de aparición en la página --- */
+.hero, .section, .projects-container, .about-container, #contact-form {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* --- Animación en la foto de perfil --- */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #ff66c4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* --- Efecto hover en los proyectos --- */
+.projects {
+    background:  #ff66c4;;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.projects:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff66c4;
+}
+
+
+
+
+
+/* --- Fondo con efecto Parallax --- */
+.parallax {
+    background: #3c3c3c;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* --- Efecto 3D en los proyectos --- */
+.project {
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    perspective: 1000px;
+}
+
+.project:hover {
+    transform: rotateY(5deg) rotateX(5deg);
+    box-shadow: 0 0 20px #ff66c4;
+}
+@keyframes floating {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: floating 3s infinite ease-in-out;
+}
+#typed-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+.scroll-down {
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #FFFFFF;
+    animation: fadeIn 2s ease-in-out;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.scroll-down p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.scroll-down a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.arrow {
+    font-size: 24px;
+    display: block;
+    animation: bounce 1.5s infinite;
+    color: #FFFFFF;
+
+}
+/* Estilos comunes para las secciones */
+section {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo específico para la sección de contacto */
+#contact {
+    background-color: #3c3c3c;
+    margin-bottom: 50px; /* Fondo blanco para la sección de contacto */
+}
+
+
+#contact h2 {
+    font-size: 3rem; /* Tamaño del título */
+    color: #ff66c4;
+    margin-bottom: 20px;
+}
+
+#contact ul {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 30px; /* Espacio entre los elementos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+    padding: 0;
+    list-style-type: none;
+}
+
+#contact ul li {
+    font-size: 1.3rem; /* Aumenta el tamaño de la fuente */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos dentro del li */
+    gap: 10px;
+    color: #FFFFFF; /* Espacio entre el ícono y el texto */
+}
+
+#contact a {
+    color: #ff66c4; /* Color para los enlaces de LinkedIn y GitHub */
+    text-decoration: none;
+}
+
+#contact ul li i {
+    font-size: 2rem; /* Tamaño del ícono */
+}
+
+.contact-link {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+#contact li strong {
+    color: #ff66c4; /* Color del texto de Celular, Email y País */
+}
+
+/* Ajustes generales para el footer */
+footer {
+    margin-top: 30px; /* Agrega margen encima del pie de página para separarlo más de la sección anterior */
+}
+
+@keyframes bounce {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { transform: translateY(10px); 
+    }
+}
